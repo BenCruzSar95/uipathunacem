@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="uLZ-YPvQeE2fjPoEz-DgEQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ7Y2K1s71i9+r9j9Soq4dVAS0CYsOVgB/zeJvL17WbF/9TAJ5dY/PevngZ1BGHLwQ74v1PkPzXw7RVq/wMKav7blS7C5gCsllPNAXdXqv73za35b1u8AFsUrAdaLojNchCm2AEgy71za//blSzE5vP1LnVrcVoOwhQ5ANXyVcgW/yXGchBmeL9BorSnO/Z/d2ckiTjqv19BI0WWgzCDVe4MTvuKZf/ty5eSjB0ql6MHO9hy5zrccY6OqVkQQX1OvOUgTC0HkOxzGKaWA4iOc3RMeXVcs2YmuZaD8GiLaNQBow4Y6Q74zwgA6ZMB6Xx2NTYAAAAASUVORK5CYII=" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP Logon 750' /&gt;" Title="SAP Logon 750">
+      <imageRef attrName="InformativeScreenshot" originalValue="42d6b7c97deba8d42fde1d7ffe8c604a.png" xmlns="">0gAaV-H4LEkCOHk0IeGERmQ</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

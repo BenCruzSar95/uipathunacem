@@ -1,0 +1,13 @@
+﻿{
+  "Id": "1sZd4eGii02_Jskc-qDiNQ",
+  "Reference": "h1rGRsAzQk-ppMVnE4IolA/1sZd4eGii02_Jskc-qDiNQ",
+  "ParentRef": "h1rGRsAzQk-ppMVnE4IolA/pQb2xOlChUayV3pgnQW9OQ",
+  "Name": "SAP Logon 750",
+  "Type": "Screen",
+  "Created": "2022-07-14T15:21:21.4189735Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.7.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-14T15:21:21.4189735Z"
+}

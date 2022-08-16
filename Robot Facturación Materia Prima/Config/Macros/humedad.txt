@@ -1,0 +1,70 @@
+Sub humedad(PedidoSAP As String)
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+    
+    
+    'Abrimos el archivo de Pedido SAP
+    Workbooks.Open Filename:=PedidoSAP
+
+Workbooks(2).Sheets(1).Activate
+
+    Columns("J:J").Select
+    Selection.ClearContents
+    Range("J2").Select
+    ActiveCell.FormulaR1C1 = "Fuera de Rango"
+    Range("J2").Select
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("C3:C" & ultimafila)
+    If celda.Value <> "" Then
+        celda.Offset(0, 5).Select
+        pedido = celda.Value
+        limiteinferior = celda.Offset(0, 5).Value
+        limitesuperior = celda.Offset(0, 6).Value
+        'MsgBox (pedido & " " & limiteinferior & " " & limitesuperior)
+        
+        Workbooks(1).Sheets(1).Activate
+        
+            Range("F1").Select
+            Selection.AutoFilter
+            ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+            ActiveSheet.Range("A1:BC" & ultimafila).AutoFilter Field:=6, Criteria1:=pedido _
+                , Operator:=xlAnd
+            Range("F1").Select
+            
+            Dim celdados As Range
+            ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+            For Each celdados In Range("N2:N" & ultimafila)
+                If celdados.EntireRow.Hidden = False And celdados.Value <> "Factor Humedad" And celdados.Value <> "" Then
+                    celdados.Select
+                    'MsgBox (celdados)
+                    If celdados.Value >= limiteinferior And celdados.Value <= limitesuperior Then
+                        celda.Offset(0, 7).Value = ""
+                    Else
+                        Workbooks(2).Sheets(1).Activate
+                        'MsgBox (limiteinferior & " " & celdados & " " & limitesuperior)
+                            celda.Offset(0, 7).Value = "Fuera"
+                        Workbooks(1).Sheets(1).Activate
+                    End If
+                End If
+            Next celdados
+            
+            
+            Selection.AutoFilter
+            Selection.AutoFilter
+        
+        Workbooks(2).Sheets(1).Activate
+        
+    End If
+Next celda
+
+    'Guardamos los cambios en el archivo 2
+    Workbooks(2).Save
+    Workbooks(2).Close True
+    
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
+
+End Sub

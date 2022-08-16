@@ -1,0 +1,12 @@
+﻿{
+  "Id": "JsaJH1GR-kmxgW2DGm7ZYw",
+  "Reference": "h1rGRsAzQk-ppMVnE4IolA/JsaJH1GR-kmxgW2DGm7ZYw",
+  "Name": "SAP Logon 750",
+  "Type": "App",
+  "Created": "2022-07-14T15:21:21.3318887Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.7.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-14T15:21:21.3318887Z"
+}
