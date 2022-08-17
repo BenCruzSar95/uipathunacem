@@ -1,0 +1,50 @@
+
+Sub uitree(uitree As String)
+
+    Workbooks.Open Filename:=uitree
+    
+    Workbooks("UiTree.xml").SaveAs Filename:="C:\Users\rpaeyuser\Documents\UiPath\Tercer proceso UNACEM\Config\Archivos\UiTree.xlsx"
+    
+    Workbooks("UiTree.xlsx").Sheets(1).Activate
+    Rows("1:1").Select
+    Selection.Delete Shift:=xlUp
+    Range("A1").Select
+    
+    Columns("A:FD").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("B:N").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("C:CG").Select
+    Selection.Delete Shift:=xlToLeft
+
+    Columns("A:B").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Selection.Delete Shift:=xlUp
+    Range("A1").Select
+
+    Range("B1").Select
+    Selection.AutoFilter
+     ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    ActiveSheet.Range("A1:B" & ultimafila).AutoFilter Field:=2, Criteria1:="=FC", _
+        Operator:=xlOr, Criteria2:="=NC"
+    Range("B2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.ClearContents
+    Range("B1").Select
+    Selection.AutoFilter
+    Selection.AutoFilter
+    Columns("B:B").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Selection.Delete Shift:=xlUp
+    Range("A1").Select
+
+    Range("A1").Value = "Path"
+    Range("B1").Value = "Documento"
+
+    Columns("A:B").Select
+    Selection.NumberFormat = "@"
+    Range("B8").Select
+    
+    Workbooks("UiTree.xlsx").Save
+    Workbooks("UiTree.xlsx").Close
+End Sub
