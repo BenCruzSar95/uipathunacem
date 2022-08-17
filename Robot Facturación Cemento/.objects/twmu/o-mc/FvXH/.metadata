@@ -1,0 +1,13 @@
+﻿{
+  "Id": "FvXHHnnAe0ySm7_J27g9iQ",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/FvXHHnnAe0ySm7_J27g9iQ",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/o-mcL2yItkirZmPE0e72SA",
+  "Name": "Resumen de Despacho Del: 01/04/2022 al 30/04/2022",
+  "Type": "Screen",
+  "Created": "2022-07-20T15:44:52.0148348Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-20T15:44:52.0148348Z"
+}

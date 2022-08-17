@@ -1,0 +1,14 @@
+﻿{
+  "Id": "c1cyJGhp0Ei04xnv3YS53Q",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/c1cyJGhp0Ei04xnv3YS53Q",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/NdNqTkuX8kG1p7Km1-Cbbg",
+  "Name": "CTextField Puesto",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-07-18T22:54:03.687596Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-18T22:54:03.687596Z"
+}

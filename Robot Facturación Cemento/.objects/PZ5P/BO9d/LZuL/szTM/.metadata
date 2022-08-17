@@ -1,0 +1,14 @@
+﻿{
+  "Id": "szTMCLuGE0-7nVgR5y_82Q",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/szTMCLuGE0-7nVgR5y_82Q",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/LZuLFlJJ6EK4uG0dGy2A_g",
+  "Name": "CTextField Fecha",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-07-20T14:23:41.2735349Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-20T14:23:41.2735349Z"
+}

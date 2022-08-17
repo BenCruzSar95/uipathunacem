@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="scyhHjaXREWgo-6bKTFYmg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="263, 253, 34, 20" ElementType="InputBox" FriendlyName="'CTextField Puesto'" FullSelectorArgument="&lt;sap id='usr/ctxtK_TPLST-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_TPLST-LOW' /&gt;" Guid="f5b7e901-f5a0-4c96-bb8b-3c9dffcc71ed" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7c2a84a07577d4ee7c37fdb89805b89d.png" xmlns="">0Rx3vgY7V70y8kefRA063jQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

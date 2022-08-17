@@ -1,0 +1,14 @@
+﻿{
+  "Id": "KDTDy55GGUeHNTswO6PP2g",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/KDTDy55GGUeHNTswO6PP2g",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/FvXHHnnAe0ySm7_J27g9iQ",
+  "Name": "C:\\\\TEMP",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-07-20T15:45:20.715743Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-20T15:45:20.715743Z"
+}

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "ouiKr6VXN0Ga16uUVfxRxw",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/ouiKr6VXN0Ga16uUVfxRxw",
+  "Name": "Lista transportes: Crear gastos transporte",
+  "Type": "App",
+  "Created": "2022-07-18T22:40:18.3196308Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-18T22:40:18.3196308Z"
+}

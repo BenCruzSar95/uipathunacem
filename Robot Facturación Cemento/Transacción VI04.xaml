@@ -1,0 +1,238 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_VI04" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,2944" sap2010:WorkflowViewState.IdRef="Transacción_VI04_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Transacción_VI04" sap:VirtualizedContainerService.HintSize="478,2879" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strFechaDiaAnterior" />
+      <Variable x:TypeArguments="x:String" Name="strFechaActual" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
+    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SAP Front End\SAP Logon.lnk" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ucas:Logon Window="{x:Null}" ConnectionName="QA1_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
+    <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="436,364" sap2010:WorkflowViewState.IdRef="Login_2" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="@Pil0to_rPA" Timeout="5000" Username="RPA_FACT">
+      <ucas:Login.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b3b9596-8817-4ab8-a37c-fc2c13a4fdd3" InformativeScreenshot="62e02413bcf798737830a61d574cabc5" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:Login.Target>
+    </ucas:Login>
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="VI04">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eaad30bf-4b17-49c3-90ed-afd68786a67c" InformativeScreenshot="56ede4e14fae7e1d6f31d1a98a4e492f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Lista transportes: Crear gastos transporte" sap:VirtualizedContainerService.HintSize="436,1111" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,822" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Text="01.04.2022" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable ContentHash="X3zmlNKom0u3P00zAMKmkQ" DesignTimeRectangle="263, 907, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtK_DTABF-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_DTABF-LOW' /&gt;" Guid="ca30c3a9-52c1-415b-b717-4c92865313d5" InformativeScreenshot="666bd419ed99fc99ba64d80518c8d2bf.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/6rha2iW1nkO5pcin5ZhZKg" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Fecha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Text="30.04.2022" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable ContentHash="NOwFGtS9OEaPYHIHMX1lvg" DesignTimeRectangle="438, 907, 76, 20" ElementType="InputBox" FriendlyName="'CTextField Fecha'" FullSelectorArgument="&lt;sap id='usr/ctxtK_DTABF-HIGH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_DTABF-HIGH' /&gt;" Guid="c33284a2-5419-429f-8dbb-7b58f27fe36e" InformativeScreenshot="79eafaec644fc278b619b3c945820578.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/7t8M32EopEauWGYqnQfdwg" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Puesto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="27ca3f14-5151-4f07-98d7-bcd0e814ad9a" Text="UE10" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable ContentHash="scyhHjaXREWgo-6bKTFYmg" DesignTimeRectangle="263, 253, 34, 20" ElementType="InputBox" FriendlyName="'CTextField Puesto'" FullSelectorArgument="&lt;sap id='usr/ctxtK_TPLST-LOW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtK_TPLST-LOW' /&gt;" Guid="f5b7e901-f5a0-4c96-bb8b-3c9dffcc71ed" InformativeScreenshot="7c2a84a07577d4ee7c37fdb89805b89d.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/c1cyJGhp0Ei04xnv3YS53Q" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="KdweZmYAukuyEzQyQO1kVw" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="3acd986cf22a64ddcca573514214d2ed.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/NdNqTkuX8kG1p7Km1-Cbbg" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Ejecutar   (F8)">
+      <ucas:SelectMenuItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="8">
+          <x:String xml:space="preserve">Ejecutar   (F8)</x:String>
+          <x:String xml:space="preserve">Borrar línea selec.   (Shift+F2)</x:String>
+          <x:String xml:space="preserve">Ayuda pantalla selección   (Shift+F6)</x:String>
+          <x:String xml:space="preserve">Traer variante...   (Shift+F5)</x:String>
+          <x:String xml:space="preserve">Opciones selección   (F2)</x:String>
+        </scg:List>
+      </ucas:SelectMenuItem.Items>
+      <ucas:SelectMenuItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1effe836-3547-411f-9eae-6ea25df9f436" InformativeScreenshot="64a1648f3b0da8cf5fc2b820446de948" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;&lt;sap id='tbar[1]/btn[8]' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:SelectMenuItem.Target>
+    </ucas:SelectMenuItem>
+    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Marcar'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Marcar todo   (Ctrl+F6)">
+      <ucas:SelectMenuItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="32">
+          <x:String xml:space="preserve">Seleccionar   (Ctrl+F12)</x:String>
+          <x:String xml:space="preserve">Log   (Ctrl+F10)</x:String>
+          <x:String xml:space="preserve">Modificar transporte   (Shift+F7)</x:String>
+          <x:String xml:space="preserve">Visualizar transporte   (Shift+F6)</x:String>
+          <x:String xml:space="preserve">Marcar todo   (Ctrl+F6)</x:String>
+          <x:String xml:space="preserve">Desmarcar todo   (Ctrl+F7)</x:String>
+          <x:String xml:space="preserve">Fijar filtros   (Ctrl+Shift+F2)</x:String>
+          <x:String xml:space="preserve">Buscar entrega   (F8)</x:String>
+          <x:String xml:space="preserve">Clasificación ascendente   (F6)</x:String>
+          <x:String xml:space="preserve">Clasificación descendente   (F7)</x:String>
+          <x:String xml:space="preserve">Cambio de vista   (Shift+F4)</x:String>
+          <x:String xml:space="preserve">Refrescar   (Shift+F2)</x:String>
+          <x:String xml:space="preserve">Selección nueva   (Shift+F5)</x:String>
+          <x:String xml:space="preserve">Variante visualización   (Ctrl+F8)</x:String>
+          <x:String xml:space="preserve">Primera columna   (Ctrl+F5)</x:String>
+          <x:String xml:space="preserve">Columna izquierda   (Ctrl+F2)</x:String>
+          <x:String xml:space="preserve">Columna derecha   (Ctrl+F3)</x:String>
+          <x:String xml:space="preserve">Última columna   (Ctrl+F4)</x:String>
+        </scg:List>
+      </ucas:SelectMenuItem.Items>
+      <ucas:SelectMenuItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55c14639-3906-4f41-92c6-96773554ae47" InformativeScreenshot="c6b9d6e8319c83b8d344fd08dcc39db7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;&lt;sap id='tbar[1]/btn[30]' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:SelectMenuItem.Target>
+    </ucas:SelectMenuItem>
+    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button Seleccionar'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Seleccionar   (Ctrl+F12)">
+      <ucas:SelectMenuItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="32">
+          <x:String xml:space="preserve">Seleccionar   (Ctrl+F12)</x:String>
+          <x:String xml:space="preserve">Log   (Ctrl+F10)</x:String>
+          <x:String xml:space="preserve">Modificar transporte   (Shift+F7)</x:String>
+          <x:String xml:space="preserve">Visualizar transporte   (Shift+F6)</x:String>
+          <x:String xml:space="preserve">Marcar todo   (Ctrl+F6)</x:String>
+          <x:String xml:space="preserve">Desmarcar todo   (Ctrl+F7)</x:String>
+          <x:String xml:space="preserve">Fijar filtros   (Ctrl+Shift+F2)</x:String>
+          <x:String xml:space="preserve">Buscar entrega   (F8)</x:String>
+          <x:String xml:space="preserve">Clasificación ascendente   (F6)</x:String>
+          <x:String xml:space="preserve">Clasificación descendente   (F7)</x:String>
+          <x:String xml:space="preserve">Cambio de vista   (Shift+F4)</x:String>
+          <x:String xml:space="preserve">Refrescar   (Shift+F2)</x:String>
+          <x:String xml:space="preserve">Selección nueva   (Shift+F5)</x:String>
+          <x:String xml:space="preserve">Variante visualización   (Ctrl+F8)</x:String>
+          <x:String xml:space="preserve">Primera columna   (Ctrl+F5)</x:String>
+          <x:String xml:space="preserve">Columna izquierda   (Ctrl+F2)</x:String>
+          <x:String xml:space="preserve">Columna derecha   (Ctrl+F3)</x:String>
+          <x:String xml:space="preserve">Última columna   (Ctrl+F4)</x:String>
+        </scg:List>
+      </ucas:SelectMenuItem.Items>
+      <ucas:SelectMenuItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cea50988-c0d2-4de1-a51d-d2441970679c" InformativeScreenshot="f239e2fb2b1cc78e2d572c9f04d4fa45" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Lista transportes: Crear gastos transporte' /&gt;&lt;sap id='tbar[1]/btn[36]' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:SelectMenuItem.Target>
+    </ucas:SelectMenuItem>
+  </Sequence>
+</Activity>

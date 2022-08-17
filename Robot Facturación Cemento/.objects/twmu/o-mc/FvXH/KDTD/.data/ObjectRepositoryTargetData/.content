@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="p2YIMHwHc0WzllpcDPNvdg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="87, 32, 370, 20" ElementType="InputBox" FriendlyName="'C:\\TEMP'" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" Guid="4521de09-a8d6-4eb8-8b2c-7bee40b50969" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Resumen de Despacho Del: 01/04/2022 al 30/04/2022' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1a1c9dd084f225d16ae8cb5f0aceeaa4.png" xmlns="">0pmnm8uUKHEybVjFRMgsUUA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

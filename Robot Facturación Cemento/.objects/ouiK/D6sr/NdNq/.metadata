@@ -1,0 +1,13 @@
+﻿{
+  "Id": "NdNqTkuX8kG1p7Km1-Cbbg",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/NdNqTkuX8kG1p7Km1-Cbbg",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/D6sr4epHt0GTGjQH3YsY4w",
+  "Name": "Lista transportes: Crear gastos transporte",
+  "Type": "Screen",
+  "Created": "2022-07-18T22:40:18.751669Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-18T22:40:18.751669Z"
+}

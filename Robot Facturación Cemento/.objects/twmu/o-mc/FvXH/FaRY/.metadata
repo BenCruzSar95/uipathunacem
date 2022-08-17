@@ -1,0 +1,14 @@
+﻿{
+  "Id": "FaRYtoN0aEujtJ4bMWBNPA",
+  "Reference": "LmgfDy6S7UeFYiW9rl1PRw/FaRYtoN0aEujtJ4bMWBNPA",
+  "ParentRef": "LmgfDy6S7UeFYiW9rl1PRw/FvXHHnnAe0ySm7_J27g9iQ",
+  "Name": "Crear",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2022-07-20T15:45:53.3238472Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-20T15:45:53.3238472Z"
+}
