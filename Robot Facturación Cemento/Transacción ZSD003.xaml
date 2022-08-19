@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Transacción_ZSD003" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_strFechaActual" Type="InArgument(x:String)" />
+    <x:Property Name="in_strRutaExcelDaiario" Type="InArgument(x:String)" />
+    <x:Property Name="in_strFechaDiaActual" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,3893</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1284,3893</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZSD003_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -80,6 +81,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="476,3828" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -281,12 +283,12 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="C:\Users\rpaeyuser\Documents\UiPath\Cuentas por cobrar segunda parte\Data\Descargas" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\\TEMP'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[in_strRutaExcelDaiario]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="p2YIMHwHc0WzllpcDPNvdg" DesignTimeRectangle="87, 32, 370, 20" ElementType="InputBox" FriendlyName="'C:\\TEMP'" FullSelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_PATH' /&gt;" Guid="4521de09-a8d6-4eb8-8b2c-7bee40b50969" InformativeScreenshot="1a1c9dd084f225d16ae8cb5f0aceeaa4.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/KDTDy55GGUeHNTswO6PP2g" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Resumen de Despacho Del: 01/04/2022 al 30/04/2022' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'EXPORT.XLSX'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="[&quot;ZSD003_&quot;+ in_strFechaActual+&quot;.XLSX&quot;]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'EXPORT.XLSX'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="60a56e16-1e56-4035-88d9-92883d4f6712" Text="ZSD003Diario.XLSX" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable ContentHash="Tp2y5zNXDkOpCzDIdlqYTw" DesignTimeRectangle="87, 54, 370, 20" ElementType="InputBox" FriendlyName="'EXPORT.XLSX'" FullSelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDY_FILENAME' /&gt;" Guid="5112fbfe-7ca3-4d59-b507-d35d204d7eff" InformativeScreenshot="97a7745d7e5395f1f458e6739826eab7.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/yJBY554MZkyfMIwAaW_GGg" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Resumen de Despacho Del: 01/04/2022 al 30/04/2022' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>

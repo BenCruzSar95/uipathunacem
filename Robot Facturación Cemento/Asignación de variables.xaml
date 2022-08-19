@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="out_strDiaEjecucion" Type="OutArgument(x:String)" />
     <x:Property Name="out_strDiaFeriado" Type="OutArgument(x:String)" />
+    <x:Property Name="out_RutaExcelDiario" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -67,7 +68,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Asignación_de_variables" sap:VirtualizedContainerService.HintSize="376,406" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Asignación_de_variables" sap:VirtualizedContainerService.HintSize="376,533" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strConfig" />
     </Sequence.Variables>
@@ -92,6 +93,11 @@
     <ui:ReadCell Cell="B3" DisplayName="Read Cell Dia Feriado" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Hoja1" WorkbookPath="[strConfig]">
       <ui:ReadCell.Result>
         <OutArgument x:TypeArguments="x:String">[out_strDiaFeriado]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
+    <ui:ReadCell Cell="B4" DisplayName="Read Cell Dia Feriado" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Hoja1" WorkbookPath="[strConfig]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[out_RutaExcelDiario]</OutArgument>
       </ui:ReadCell.Result>
     </ui:ReadCell>
   </Sequence>
