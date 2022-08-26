@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="prueba" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="PE_RAZONSOCIAL" Type="InArgument(x:String)" />
+    <x:Property Name="PE_PEDIDO" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,2284</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,2594</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>prueba_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -86,7 +87,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="prueba" sap:VirtualizedContainerService.HintSize="756,2219" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="prueba" sap:VirtualizedContainerService.HintSize="786,2489" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataProveedoresValidos" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataExcelMensual" />
@@ -98,27 +99,27 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="False" DataTable="[DataExcelMensual]" DisplayName="Private: Read Range" sap:VirtualizedContainerService.HintSize="714,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A6:O5648" SheetName="PLANILLA" WorkbookPath="Config\Archivos\4.Montly_provision_Q1_Q2 final.xlsx" />
-    <ui:ReadRange AddHeaders="True" DataTable="[DataProveedoresValidos]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="714,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="Config\Archivos\LISTADO DE PROVEDORES TRANSPORTE.xlsx">
+    <ui:ReadRange AddHeaders="False" DataTable="[DataExcelMensual]" DisplayName="Private: Read Range" sap:VirtualizedContainerService.HintSize="744,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A6:O5648" SheetName="PLANILLA" WorkbookPath="Config\Archivos\4.Montly_provision_Q1_Q2 final.xlsx" />
+    <ui:ReadRange AddHeaders="True" DataTable="[DataProveedoresValidos]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="744,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Hoja1" WorkbookPath="Config\Archivos\LISTADO DE PROVEDORES TRANSPORTE.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataProveedoresValidos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="714,1873" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataProveedoresValidos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="744,2143" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="680,1758" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="710,2028" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="668,60" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[ExcelPE_RazonSocial]</OutArgument>
               </Assign.To>
@@ -126,15 +127,15 @@
                 <InArgument x:TypeArguments="x:String">[string.join("", row(3).ToString.Split({Environment.NewLine,vbcrlf,vblf,” ",vbtab,vbcr,vbNewLine},StringSplitOptions.RemoveEmptyEntries))]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[row(3).ToString &lt;&gt;  &quot;&quot;And PE_RAZONSOCIAL = ExcelPE_RazonSocial]" sap:VirtualizedContainerService.HintSize="638,1566" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[row(3).ToString &lt;&gt;  &quot;&quot;And PE_RAZONSOCIAL = ExcelPE_RazonSocial]" sap:VirtualizedContainerService.HintSize="668,1836" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="602,1379" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="632,1649" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,346" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="590,346" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                     <ui:CommentOut.Body>
                       <Sequence sap:VirtualizedContainerService.HintSize="418,268" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
@@ -153,7 +154,7 @@
                       </Sequence>
                     </ui:CommentOut.Body>
                   </ui:CommentOut>
-                  <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="590,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
                     </Assign.To>
@@ -161,27 +162,27 @@
                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataExcelMensual]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,801" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataExcelMensual]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="590,1071" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="RD" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,686" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,956" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[RD(1).ToString =row(3).ToString And contador&lt;1]" sap:VirtualizedContainerService.HintSize="484,594" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[RD(1).ToString =row(3).ToString And contador&lt;1]" sap:VirtualizedContainerService.HintSize="514,864" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,407" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <Sequence sap:VirtualizedContainerService.HintSize="478,677" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
                                   </Assign.To>
@@ -189,8 +190,27 @@
                                     <InArgument x:TypeArguments="x:Int32">[contador+1]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[RD(1).ToString +&quot;   RAZON SOCIAL  &quot;+row(3).ToString +&quot; contador &quot;+contador.ToString]" />
-                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[RD(1).ToString +&quot;   RAZON SOCIAL  &quot;+row(3).ToString]" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[RD(1).ToString +&quot;   RAZON SOCIAL  &quot;+row(3).ToString +&quot; contador &quot;+contador.ToString]" />
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,254" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[RD(1).ToString +&quot;   RAZON SOCIAL  &quot;+row(3).ToString + &quot; pedido&quot;  +RD(2).ToString]" />
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
+                                <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[PE_PEDIDO]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[RD(2).ToString]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -216,7 +236,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
