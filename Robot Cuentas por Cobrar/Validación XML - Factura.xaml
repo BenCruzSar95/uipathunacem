@@ -4,11 +4,15 @@
     <x:Property Name="in_File" Type="InArgument(x:String)" />
     <x:Property Name="PE_PEDIDO" Type="OutArgument(x:String)" />
     <x:Property Name="PE_VEHICULO" Type="OutArgument(x:String)" />
+    <x:Property Name="nombreArchivo" Type="InArgument(x:String)" />
+    <x:Property Name="PE_RS" Type="OutArgument(x:String)" />
+    <x:Property Name="PE_CODSAP" Type="OutArgument(x:String)" />
+    <x:Property Name="PE_PLACA" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1236,1873</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,1565</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZFI081_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -123,7 +127,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="520,1808" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="418,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XMLRutas" />
       <Variable x:TypeArguments="sxl:XDocument" Name="strXML" />
@@ -143,18 +147,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,236" sap2010:WorkflowViewState.IdRef="CommentOut_61">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="CommentOut_61">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_100">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,498" sap2010:WorkflowViewState.IdRef="Sequence_100">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_99">
+          <Sequence sap:VirtualizedContainerService.HintSize="376,406" sap2010:WorkflowViewState.IdRef="Sequence_99">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -164,8 +168,14 @@
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,1440" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1237" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="linea" />
         <Variable x:TypeArguments="x:String" Name="strextra" />
@@ -177,9 +187,9 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[in_File]" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_3" Range="All" Text="[textoPDF]" />
-      <ui:Matches BuilderPattern="\d{49}" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[textoPDF]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d{49}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d{49}" RegexOption="Multiline, Compiled" Result="[MatchNumeroAutorizacion]" />
-      <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[in_File]" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_3" Range="All" Text="[textoPDF]" />
+      <ui:Matches BuilderPattern="\d{49}" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[textoPDF]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d{49}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d{49}" RegexOption="Multiline, Compiled" Result="[MatchNumeroAutorizacion]" />
+      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strNumeroAutorizacion]</OutArgument>
         </Assign.To>
@@ -187,8 +197,8 @@
           <InArgument x:TypeArguments="x:String">[MatchNumeroAutorizacion(0).value.Replace(Environment.NewLine,"")]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[MatchNumeroAutorizacion(0).value]" />
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,254" sap2010:WorkflowViewState.IdRef="CommentOut_63">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[MatchNumeroAutorizacion(0).value]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_63">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_102">
             <sap:WorkflowViewStateService.ViewState>
@@ -199,16 +209,22 @@
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[strNumeroAutorizacion]" />
           </Sequence>
         </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Arrays workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Arrays.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Arrays workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Arrays.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="entrada" />
           <OutArgument x:TypeArguments="x:String" x:Key="salida">[SalidaFactura]</OutArgument>
           <InArgument x:TypeArguments="x:String" x:Key="NumeroAutorizacion">[strNumeroAutorizacion]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:Matches BuilderPattern="(?=&lt;factura)[\S\s]*(?&lt;=infoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[SalidaFactura]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?=&lt;factura)[\\S\\s]*(?&lt;=infoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?=&lt;factura)[\S\s]*(?&lt;=infoAdicional&gt;)" RegexOption="Multiline, Compiled" Result="[Infofactura]" />
-      <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <ui:Matches BuilderPattern="(?=&lt;factura)[\S\s]*(?&lt;=infoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[SalidaFactura]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?=&lt;factura)[\\S\\s]*(?&lt;=infoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?=&lt;factura)[\S\s]*(?&lt;=infoAdicional&gt;)" RegexOption="Multiline, Compiled" Result="[Infofactura]" />
+      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[SalidaFactura]</OutArgument>
         </Assign.To>
@@ -216,7 +232,7 @@
           <InArgument x:TypeArguments="x:String">[Infofactura(0).value]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[SalidaFactura]</OutArgument>
         </Assign.To>
@@ -224,12 +240,17 @@
           <InArgument x:TypeArguments="x:String">[SalidaFactura+"&lt;/factura&gt;"]</InArgument>
         </Assign.Value>
       </Assign>
-      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Cruce información XML workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Cruce información XML.xaml">
+      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Cruce información XML workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Cruce información XML.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_infoXML">[SalidaFactura]</InArgument>
           <InArgument x:TypeArguments="sxl:XDocument" x:Key="in_xdocfactura" />
           <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="nombreArchivo">[nombreArchivo]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACAO">[PE_PLACA]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
