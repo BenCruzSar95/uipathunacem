@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3502,4411</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3820,4799</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Cruce_información_XML_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -55,7 +55,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -92,7 +92,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Cruce_información_XML" sap:VirtualizedContainerService.HintSize="3512,4346" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Cruce_información_XML" sap:VirtualizedContainerService.HintSize="3830,4734" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Placa" />
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Ruc" />
@@ -102,13 +102,22 @@
       <Variable x:TypeArguments="x:String" Name="NuevoTexto" />
       <Variable x:TypeArguments="x:String" Name="MP_RUC" />
       <Variable x:TypeArguments="x:String" Name="MP_RS" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_MP_RUC" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_MP_PLACA" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_MP_RAZONSOCIAL" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_MP_PUNTOEMISION" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="3470,1507" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap:VirtualizedContainerService.HintSize="3788,1507" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -230,7 +239,7 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3470,254" sap2010:WorkflowViewState.IdRef="CommentOut_37">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3788,254" sap2010:WorkflowViewState.IdRef="CommentOut_37">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_77">
           <sap:WorkflowViewStateService.ViewState>
@@ -242,7 +251,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Assign sap:VirtualizedContainerService.HintSize="3470,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+    <Assign sap:VirtualizedContainerService.HintSize="3788,60" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[NuevoTexto]</OutArgument>
       </Assign.To>
@@ -250,9 +259,9 @@
         <InArgument x:TypeArguments="x:String">[string.join("", in_infoXML.Split({Environment.NewLine,vbcrlf,vblf,” ",vbtab,vbcr,vbNewLine},StringSplitOptions.RemoveEmptyEntries))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3470,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[valor]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3470,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[NuevoTexto]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3470,51" sap2010:WorkflowViewState.IdRef="CommentOut_25">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3788,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[valor]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3788,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[NuevoTexto]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3788,51" sap2010:WorkflowViewState.IdRef="CommentOut_25">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <sap:WorkflowViewStateService.ViewState>
@@ -270,15 +279,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <If Condition="[valor &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="3470,1960" sap2010:WorkflowViewState.IdRef="If_9">
+    <If Condition="[valor &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="3788,2348" sap2010:WorkflowViewState.IdRef="If_9">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="2949,1802" sap2010:WorkflowViewState.IdRef="Sequence_55">
+        <Sequence sap:VirtualizedContainerService.HintSize="3267,2190" sap2010:WorkflowViewState.IdRef="Sequence_55">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[valor =&quot;COMPANIA&quot;]" sap:VirtualizedContainerService.HintSize="2907,1710" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[valor =&quot;COMPANIA&quot;]" sap:VirtualizedContainerService.HintSize="3225,2098" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -350,22 +359,22 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="1823,1552" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence sap:VirtualizedContainerService.HintSize="2141,1940" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="1781,1460" sap2010:WorkflowViewState.IdRef="If_8">
+                <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="2099,1848" sap2010:WorkflowViewState.IdRef="If_8">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="571,408" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                    <Sequence sap:VirtualizedContainerService.HintSize="889,1690" sap2010:WorkflowViewState.IdRef="Sequence_90">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="529,316" sap2010:WorkflowViewState.IdRef="If_10">
+                      <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="847,1598" sap2010:WorkflowViewState.IdRef="If_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -373,16 +382,16 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                          <Sequence sap:VirtualizedContainerService.HintSize="560,1440" sap2010:WorkflowViewState.IdRef="Sequence_100">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                            <Sequence sap:VirtualizedContainerService.HintSize="518,1348" sap2010:WorkflowViewState.IdRef="Sequence_53">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -562,20 +571,20 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="1165,1302" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                    <Sequence sap:VirtualizedContainerService.HintSize="1165,1578" sap2010:WorkflowViewState.IdRef="Sequence_112">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap:VirtualizedContainerService.HintSize="1123,1210" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                      <Sequence sap:VirtualizedContainerService.HintSize="1123,1486" sap2010:WorkflowViewState.IdRef="Sequence_111">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="1081,1118" sap2010:WorkflowViewState.IdRef="If_11">
+                        <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="1081,1394" sap2010:WorkflowViewState.IdRef="If_11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -583,13 +592,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="518,960" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                            <Sequence sap:VirtualizedContainerService.HintSize="518,1236" sap2010:WorkflowViewState.IdRef="Sequence_105">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="476,868" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,1144" sap2010:WorkflowViewState.IdRef="Sequence_104">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -620,36 +629,40 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExcelApplicationScope>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="434,448" sap2010:WorkflowViewState.IdRef="Sequence_103">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
-                                  </Sequence.Variables>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="434,724" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_31" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_32" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_33" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_34" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_31" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_32" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_33" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_34" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[PE_MP_RAZONSOCIAL(0).value]" />
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PE_MP_RAZONSOCIAL(0).value" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NuevoTexto" />
+                                      </InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
                                 </Sequence>
                               </Sequence>
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="518,960" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                            <Sequence sap:VirtualizedContainerService.HintSize="518,1236" sap2010:WorkflowViewState.IdRef="Sequence_110">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="476,868" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,1144" sap2010:WorkflowViewState.IdRef="Sequence_109">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -680,7 +693,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExcelApplicationScope>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="434,448" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="434,724" sap2010:WorkflowViewState.IdRef="Sequence_108">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
                                     <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
@@ -694,10 +707,21 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_35" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_36" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_37" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_38" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_35" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_36" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_37" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
+                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_38" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[PE_MP_RAZONSOCIAL(0).value]" />
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PE_MP_RAZONSOCIAL(0).value" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NuevoTexto" />
+                                      </InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
                                 </Sequence>
                               </Sequence>
                             </Sequence>
