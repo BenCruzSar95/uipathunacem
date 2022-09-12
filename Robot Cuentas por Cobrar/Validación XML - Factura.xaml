@@ -8,11 +8,12 @@
     <x:Property Name="PE_RS" Type="OutArgument(x:String)" />
     <x:Property Name="PE_CODSAP" Type="OutArgument(x:String)" />
     <x:Property Name="PE_PLACA" Type="OutArgument(x:String)" />
+    <x:Property Name="in_Row" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,1565</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,1485</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZFI081_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -243,14 +244,31 @@
       <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Cruce información XML workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Cruce información XML.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_infoXML">[SalidaFactura]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_infoXML">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SalidaFactura" />
+          </InArgument>
           <InArgument x:TypeArguments="sxl:XDocument" x:Key="in_xdocfactura" />
-          <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="nombreArchivo">[nombreArchivo]</InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACAO">[PE_PLACA]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PE_PEDIDO" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PE_VEHICULO" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="nombreArchivo">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="nombreArchivo" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PE_RS" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PE_CODSAP" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACAO">
+            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PE_PLACA" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Row">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Row" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
