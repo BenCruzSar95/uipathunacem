@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Cruce_información_XML" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Cruce_información_XML" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_infoXML" Type="InArgument(x:String)" />
     <x:Property Name="in_xdocfactura" Type="InArgument(sxl:XDocument)" />
@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>3904,5031</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,2970</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Cruce_información_XML_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -93,7 +93,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Cruce_información_XML" sap:VirtualizedContainerService.HintSize="3914,4926" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Cruce_información_XML" sap:VirtualizedContainerService.HintSize="1035,2905" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Placa" />
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Ruc" />
@@ -121,7 +121,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="3872,1507" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap:VirtualizedContainerService.HintSize="993,1507" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -243,7 +243,7 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3872,254" sap2010:WorkflowViewState.IdRef="CommentOut_37">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="993,254" sap2010:WorkflowViewState.IdRef="CommentOut_37">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_77">
           <sap:WorkflowViewStateService.ViewState>
@@ -255,7 +255,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Assign sap:VirtualizedContainerService.HintSize="3872,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+    <Assign sap:VirtualizedContainerService.HintSize="993,60" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[NuevoTexto]</OutArgument>
       </Assign.To>
@@ -263,9 +263,9 @@
         <InArgument x:TypeArguments="x:String">[string.join("", in_infoXML.Split({Environment.NewLine,vbcrlf,vblf,” ",vbtab,vbcr,vbNewLine},StringSplitOptions.RemoveEmptyEntries))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3872,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[valor]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="3872,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[NuevoTexto]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="3872,51" sap2010:WorkflowViewState.IdRef="CommentOut_25">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="993,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[valor]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="993,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[NuevoTexto]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="993,51" sap2010:WorkflowViewState.IdRef="CommentOut_25">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_47">
           <sap:WorkflowViewStateService.ViewState>
@@ -283,404 +283,143 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <If Condition="[valor &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="3872,2540" sap2010:WorkflowViewState.IdRef="If_9">
-      <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="3351,2382" sap2010:WorkflowViewState.IdRef="Sequence_55">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="993,519" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <If Condition="[valor &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[valor =&quot;COMPANIA&quot;]" sap:VirtualizedContainerService.HintSize="3309,2290" sap2010:WorkflowViewState.IdRef="If_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="1039,761" sap2010:WorkflowViewState.IdRef="Sequence_23">
+          <If.Then>
+            <Sequence sap:VirtualizedContainerService.HintSize="3673,2552" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[valor =&quot;COMPANIA&quot;]" sap:VirtualizedContainerService.HintSize="3631,2460" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="997,669" sap2010:WorkflowViewState.IdRef="If_7">
-                  <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_51">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                        <ui:ExcelApplicationScope.Body>
-                          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_60">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="dos" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ExcelApplicationScope.Body>
-                      </ui:ExcelApplicationScope>
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="476,511" sap2010:WorkflowViewState.IdRef="Sequence_52">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                        <ui:ExcelApplicationScope.Body>
-                          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_61">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="tres" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_3" />
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ExcelApplicationScope.Body>
-                      </ui:ExcelApplicationScope>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;MP  COMPAÑIA&quot;]" />
-                    </Sequence>
-                  </If.Else>
-                </If>
-              </Sequence>
-            </If.Then>
-            <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="2225,2132" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="2183,2040" sap2010:WorkflowViewState.IdRef="If_8">
-                  <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="889,1690" sap2010:WorkflowViewState.IdRef="Sequence_90">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="847,1598" sap2010:WorkflowViewState.IdRef="If_10">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="560,1440" sap2010:WorkflowViewState.IdRef="Sequence_100">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap:VirtualizedContainerService.HintSize="518,1348" sap2010:WorkflowViewState.IdRef="Sequence_53">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="476,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                <ui:ExcelApplicationScope.Body>
-                                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_66">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cuatro" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_6" />
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:ExcelApplicationScope.Body>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:ExcelApplicationScope>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_22" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_23" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_11" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke informacionmensual workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="informacionmensual.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="PE_RAZONSOCIAL">[PE_RAZONSOCIAL(0).VALUE]</InArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_placa">[PE_PLACA(0).value]</InArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACA">[PE_PLACAO]</OutArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                  <ui:ExcelApplicationScope.Body>
-                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_62">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="seis" EntryMethodParameters="[{nombreArchivo,PE_CODSAP,PE_RS, PE_PEDIDO, PE_VEHICULO,PE_PLACAO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_4" />
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ExcelApplicationScope.Body>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="1039,761" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="997,669" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                            <ui:ExcelApplicationScope.Body>
+                              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_60">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:ExcelApplicationScope>
-                              </Sequence>
-                            </Sequence>
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_92">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_99">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="476,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                <ui:ExcelApplicationScope.Body>
-                                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_93">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cuatro" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_11" />
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:ExcelApplicationScope.Body>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:ExcelApplicationScope>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_98">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
-                                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_24" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_26" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_29" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
-                                <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_30" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke informacionmensual workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="informacionmensual.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="PE_RAZONSOCIAL">[PE_RAZONSOCIAL(0).VALUE]</InArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_placa">[PE_PLACA(0).value]</InArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACA">[PE_PLACAO]</OutArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                  <ui:ExcelApplicationScope.Body>
-                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_97">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="seis" EntryMethodParameters="[{nombreArchivo,PE_CODSAP,PE_RS, PE_PEDIDO, PE_VEHICULO,PE_PLACAO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_12" />
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ExcelApplicationScope.Body>
+                                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="dos" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ExcelApplicationScope.Body>
+                          </ui:ExcelApplicationScope>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,511" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                            <ui:ExcelApplicationScope.Body>
+                              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:ExcelApplicationScope>
-                              </Sequence>
-                            </Sequence>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="1249,1882" sap2010:WorkflowViewState.IdRef="Sequence_112">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap:VirtualizedContainerService.HintSize="1207,1790" sap2010:WorkflowViewState.IdRef="Sequence_111">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="1165,1698" sap2010:WorkflowViewState.IdRef="If_11">
+                                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="tres" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_3" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ExcelApplicationScope.Body>
+                          </ui:ExcelApplicationScope>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;MP  COMPAÑIA&quot;]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="2547,2302" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[NuevoTexto.Contains(&quot;CEMENTO&quot;) Or NuevoTexto.Contains(&quot;Cemento&quot;) or NuevoTexto.Contains(&quot;cemento&quot;)]" sap:VirtualizedContainerService.HintSize="2505,2210" sap2010:WorkflowViewState.IdRef="If_8">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="1207,1690" sap2010:WorkflowViewState.IdRef="Sequence_90">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="560,1540" sap2010:WorkflowViewState.IdRef="Sequence_105">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="518,1448" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                          <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="1165,1598" sap2010:WorkflowViewState.IdRef="If_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="560,1440" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                  <ui:ExcelApplicationScope.Body>
-                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_63">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cinco" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_5" />
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ExcelApplicationScope.Body>
+                                <Sequence sap:VirtualizedContainerService.HintSize="518,1348" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:ExcelApplicationScope>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1028" sap2010:WorkflowViewState.IdRef="Sequence_103">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_31" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_32" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_33" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_34" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PE_MP_RAZONSOCIAL(0).value" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NuevoTexto" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_Row">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Row" />
-                                      </InArgument>
-                                      <OutArgument x:TypeArguments="x:String" x:Key="out_pedido">
-                                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="MP_Pedido" />
-                                      </OutArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
-                                  </ui:InvokeWorkflowFile>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_18">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[PE_MP_RS]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="476,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
                                     <ui:ExcelApplicationScope.Body>
                                       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="siete" EntryMethodParameters="[{nombreArchivo,PE_MP_RS, MP_Pedido}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_18" />
+                                          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cuatro" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_6" />
                                         </Sequence>
                                       </ActivityAction>
                                     </ui:ExcelApplicationScope.Body>
@@ -691,103 +430,89 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:ExcelApplicationScope>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_22" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_23" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_11" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke informacionmensual workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="informacionmensual.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="PE_RAZONSOCIAL">[PE_RAZONSOCIAL(0).VALUE]</InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_placa">[PE_PLACA(0).value]</InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACA">[PE_PLACAO]</OutArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                      <ui:ExcelApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="seis" EntryMethodParameters="[{nombreArchivo,PE_CODSAP,PE_RS, PE_PEDIDO, PE_VEHICULO,PE_PLACAO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_4" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ExcelApplicationScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ExcelApplicationScope>
+                                  </Sequence>
                                 </Sequence>
                               </Sequence>
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="560,1540" sap2010:WorkflowViewState.IdRef="Sequence_110">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="518,1448" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="560,1440" sap2010:WorkflowViewState.IdRef="Sequence_92">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-                                  <ui:ExcelApplicationScope.Body>
-                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_113">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cinco" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_17" />
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ExcelApplicationScope.Body>
+                                <Sequence sap:VirtualizedContainerService.HintSize="518,1348" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </ui:ExcelApplicationScope>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1028" sap2010:WorkflowViewState.IdRef="Sequence_108">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
-                                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_35" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_36" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_37" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
-                                  <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_38" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PE_MP_RAZONSOCIAL(0).value" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NuevoTexto" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_Row">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Row" />
-                                      </InArgument>
-                                      <OutArgument x:TypeArguments="x:String" x:Key="out_pedido">
-                                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PEDIDO" />
-                                      </OutArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
-                                  </ui:InvokeWorkflowFile>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_17">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[PE_MP_RS]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="476,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
                                     <ui:ExcelApplicationScope.Body>
                                       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_93">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="siete" EntryMethodParameters="[{nombreArchivo,PE_MP_RS,PEDIDO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_19" />
+                                          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cuatro" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_11" />
                                         </Sequence>
                                       </ActivityAction>
                                     </ui:ExcelApplicationScope.Body>
@@ -798,46 +523,369 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:ExcelApplicationScope>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,928" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_24" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RUC]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_26" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PLACA]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_29" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_RAZONSOCIAL]" />
+                                    <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="Matches_30" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_PUNTOEMISION]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke informacionmensual workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="informacionmensual.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="PE_RAZONSOCIAL">[PE_RAZONSOCIAL(0).VALUE]</InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_PEDIDO">[PE_PEDIDO]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_VEHICULO">[PE_VEHICULO]</OutArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_placa">[PE_PLACA(0).value]</InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_RS">[PE_RS]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_CODSAP">[PE_CODSAP]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="PE_PLACA">[PE_PLACAO]</OutArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_12" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                      <ui:ExcelApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="seis" EntryMethodParameters="[{nombreArchivo,PE_CODSAP,PE_RS, PE_PEDIDO, PE_VEHICULO,PE_PLACAO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_12" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ExcelApplicationScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ExcelApplicationScope>
+                                  </Sequence>
                                 </Sequence>
                               </Sequence>
-                            </Sequence>
-                          </If.Else>
-                        </If>
-                      </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="1253,2052" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="1211,1960" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[NuevoTexto.Contains(&quot;Placa&quot;) Or NuevoTexto.Contains(&quot;PLACA&quot;)]" sap:VirtualizedContainerService.HintSize="1169,1868" sap2010:WorkflowViewState.IdRef="If_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="562,1710" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="520,1618" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="478,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                      <ui:ExcelApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cinco" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_5" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ExcelApplicationScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ExcelApplicationScope>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="478,1198" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_31" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_32" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Placa\&quot;&gt;)(.*?)(?=&lt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Placa&quot;&gt;)(.*?)(?=&lt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_33" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Nombre\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Nombre&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_34" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_38">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
+                                              <ui:InvokeWorkflowFile.Arguments>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">[NuevoTexto]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_Row">[in_Row]</InArgument>
+                                                <OutArgument x:TypeArguments="x:String" x:Key="out_pedido">[MP_Pedido]</OutArgument>
+                                              </ui:InvokeWorkflowFile.Arguments>
+                                            </ui:InvokeWorkflowFile>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[PE_MP_RS]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                        <ui:ExcelApplicationScope.Body>
+                                          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="siete" EntryMethodParameters="[{nombreArchivo,PE_MP_RS, MP_Pedido}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_18" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ExcelApplicationScope.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelApplicationScope>
+                                    </Sequence>
+                                  </Sequence>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="562,1710" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="520,1618" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="478,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                      <ui:ExcelApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="cinco" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_17" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ExcelApplicationScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ExcelApplicationScope>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="478,1198" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RUC" />
+                                        <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PLACA" />
+                                        <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_CONTRIBUYENTE" />
+                                        <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_RAZONSOCIAL" />
+                                        <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="PE_PUNTOEMISION" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_35" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;RUC\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;RUC&quot;&gt;)(.*?)(?=&lt;/campoAdicional)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RUC]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_36" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;DetalleAdicional\&quot;&gt;)(.*?)(?=CONTRIBUYENTE)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;DetalleAdicional&quot;&gt;)(.*?)(?=CONTRIBUYENTE)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PLACA]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_37" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;Razonsocial\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;Razonsocial&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_RAZONSOCIAL]" />
+                                      <ui:Matches BuilderPattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="Matches_38" Input="[NuevoTexto]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=&lt;campoAdicionalnombre=\&quot;PuntoEmision\&quot;&gt;)(.*?)(?=&lt;\/campoAdicional&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=&lt;campoAdicionalnombre=&quot;PuntoEmision&quot;&gt;)(.*?)(?=&lt;/campoAdicional&gt;)" RegexOption="IgnoreCase, Multiline, Compiled" Result="[PE_MP_PUNTOEMISION]" />
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_39">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InformaciónPEMP workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="InformaciónPEMP.xaml">
+                                              <ui:InvokeWorkflowFile.Arguments>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_MPRazonSocial">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_NuevoTexto">[NuevoTexto]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_Row">[in_Row]</InArgument>
+                                                <OutArgument x:TypeArguments="x:String" x:Key="out_pedido">[PEDIDO]</OutArgument>
+                                              </ui:InvokeWorkflowFile.Arguments>
+                                            </ui:InvokeWorkflowFile>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[PE_MP_RS]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[PE_MP_RAZONSOCIAL(0).value]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                                        <ui:ExcelApplicationScope.Body>
+                                          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="siete" EntryMethodParameters="[{nombreArchivo,PE_MP_RS,PEDIDO}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_19" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ExcelApplicationScope.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelApplicationScope>
+                                    </Sequence>
+                                  </Sequence>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_56">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="uno" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
                     </Sequence>
-                  </If.Else>
-                </If>
-              </Sequence>
-            </If.Else>
-          </If>
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+            </Sequence>
+          </If.Else>
+        </If>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,357" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_57">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="uno" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
-                </Sequence>
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
-        </Sequence>
-      </If.Else>
-    </If>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" InstanceCachePeriod="3000" WorkbookPath="Config\Archivos\UiTree.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\comentario.txt" DisplayName="Invoke VBA" EntryMethodName="ocho" EntryMethodParameters="[{nombreArchivo}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_20" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
   </Sequence>
 </Activity>

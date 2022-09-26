@@ -144,3 +144,24 @@ For Each celda In Range("B1:B" & ultimafila)
     End If
 Next celda
 End Sub
+
+Sub ocho(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       'celda.Offset(0,1).value = "Compañía Cemento"
+       celda.Offset(0,7).value = "Caso de revisión manual"
+    End If
+Next celda
+End Sub
