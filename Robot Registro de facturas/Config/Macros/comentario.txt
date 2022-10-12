@@ -1,0 +1,167 @@
+
+Sub uno(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,1).value = "No cumple cumple con los parámetros"
+    End If
+Next celda
+End Sub
+
+Sub dos(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,1).value = "Compañía Cemento"
+       celda.Offset(0,7).value = "Caso de revisión manual"
+    End If
+Next celda
+End Sub
+
+Sub tres(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,1).value = "Compañía MP"
+    End If
+Next celda
+End Sub
+
+Sub cuatro(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,1).value = "Punto Emisión Cemento"
+    End If
+Next celda
+End Sub
+
+Sub cinco(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,1).value = "Punto Emisión MP"
+    End If
+Next celda
+End Sub
+
+Sub seis(nombreArchivo As String,PE_CODSAP As String, PE_RS As String, PE_PEDIDO As String, PE_VEHICULO As String, PE_PLACA As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,2).value = PE_CODSAP
+       celda.Offset(0,3).value = PE_RS
+       celda.Offset(0,4).value = PE_PEDIDO
+       celda.Offset(0,5).value = PE_VEHICULO
+       celda.Offset(0,6).value = PE_PLACA
+    End If
+Next celda
+End Sub
+
+Sub siete(nombreArchivo As String,PE_MP_RAZONSOCIAL As String, PEDIDO As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       celda.Offset(0,3).value = PE_MP_RAZONSOCIAL
+       celda.Offset(0,4).value = PEDIDO
+    End If
+Next celda
+End Sub
+
+Sub ocho(nombreArchivo As String)
+
+Range("C1").value = "Categoría"
+Range("D1").value = "COD SAP"
+Range("E1").value = "Razón Social"
+Range("F1").value = "Pedido"
+Range("G1").value = "Vehículo"
+Range("H1").value = "Placa"
+Range("I1").value = "Comentario factura"
+
+
+ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+Dim celda As Range
+For Each celda In Range("B1:B" & ultimafila)
+    If nombreArchivo = celda.value then
+       'celda.Offset(0,1).value = "Compañía Cemento"
+       celda.Offset(0,7).value = "Caso de revisión manual"
+    End If
+Next celda
+End Sub
