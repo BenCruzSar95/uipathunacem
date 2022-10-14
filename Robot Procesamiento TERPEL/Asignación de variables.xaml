@@ -4,11 +4,12 @@
     <x:Property Name="out_strUiTreexlsx" Type="OutArgument(x:String)" />
     <x:Property Name="out_strCarpetaPDF" Type="OutArgument(x:String)" />
     <x:Property Name="out_strProveedoresRetenciones" Type="OutArgument(x:String)" />
+    <x:Property Name="out_strZMM023xslx" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,852</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Asignación_de_variables_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -69,7 +70,7 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Asignación_de_variables" sap:VirtualizedContainerService.HintSize="376,660" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Asignación_de_variables" sap:VirtualizedContainerService.HintSize="376,787" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strCatalogoConfig" />
     </Sequence.Variables>
@@ -83,7 +84,7 @@
         <OutArgument x:TypeArguments="x:String">[strCatalogoConfig]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\Users\rpaeyuser\Documents\UiPath\Robot Registro de facturas\Config\Config.xlsx</InArgument>
+        <InArgument x:TypeArguments="x:String">C:\Users\rpaeyuser\Documents\UiPath\Robot Procesamiento TERPEL\Config\Config.xlsx</InArgument>
       </Assign.Value>
     </Assign>
     <ui:ReadCell Cell="B2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]">
@@ -101,6 +102,15 @@
         <OutArgument x:TypeArguments="x:String">[out_strCarpetaPDF]</OutArgument>
       </ui:ReadCell.Result>
     </ui:ReadCell>
-    <ui:ReadCell Result="{x:Null}" Cell="B5" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]" />
+    <ui:ReadCell Cell="B5" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[out_strProveedoresRetenciones]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
+    <ui:ReadCell Cell="B6" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_5" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[out_strZMM023xslx]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
   </Sequence>
 </Activity>

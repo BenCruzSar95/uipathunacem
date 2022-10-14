@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,1774" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,1734" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
@@ -69,7 +69,6 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="478,1669" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -120,57 +119,39 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Asignación de variables workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Asignación de variables.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strUiTree">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strUiTree" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strUiTreexlsx">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strUiTreexlsx" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strCarpetaPDF">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strCarpetaPDF" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strProveedoresRetenciones">
-            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strProveedoresRetenciones" />
-          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strUiTree">[strUiTree]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strUiTreexlsx">[strUiTreexlsx]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strCarpetaPDF">[strCarpetaPDF]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strProveedoresRetenciones">[strProveedoresRetenciones]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
     <ui:Comment sap:VirtualizedContainerService.HintSize="436,74" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Empezaremos a ejecutar la transacción ZFI081" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZFI081 workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZFI081.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="salida">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="salida" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strUiTree">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strUiTree" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strUiTreexlsx">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strUiTreexlsx" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strCarpetaPDF">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCarpetaPDF" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strProveedoresRetenciones">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strProveedoresRetenciones" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_8">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TransacciónZFI082 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="TransacciónZFI082.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Transacción ZFI081 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Transacción ZFI081.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              <OutArgument x:TypeArguments="x:String" x:Key="salida">[salida]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strUiTree">[strUiTree]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strUiTreexlsx">[strUiTreexlsx]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strCarpetaPDF">[strCarpetaPDF]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strProveedoresRetenciones">[strProveedoresRetenciones]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TransacciónZFI082 workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="TransacciónZFI082.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_8">
