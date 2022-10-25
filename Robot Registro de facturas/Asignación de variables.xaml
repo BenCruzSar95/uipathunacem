@@ -101,6 +101,10 @@
         <OutArgument x:TypeArguments="x:String">[out_strCarpetaPDF]</OutArgument>
       </ui:ReadCell.Result>
     </ui:ReadCell>
-    <ui:ReadCell Result="{x:Null}" Cell="B5" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]" />
+    <ui:ReadCell Cell="B5" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Hoja1" WorkbookPath="[strCatalogoConfig]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[out_strProveedoresRetenciones]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
   </Sequence>
 </Activity>

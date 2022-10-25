@@ -1,0 +1,32 @@
+Sub uno(ZSD As String)
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+    
+    
+    'Abrimos el archivo Diario de ZSD003
+    Workbooks.Open Filename:=ZSD
+        
+    Workbooks(1).Sheets(1).Activate
+    ultimafila = ((ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row) + 1)
+    Range("A" & ultimafila).Select
+    
+    Workbooks(2).Sheets(1).Activate
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Range("A1:AA" & ultimafila).Copy
+    
+    Workbooks(1).Sheets(1).Activate
+    ultimafila = ((ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row) + 1)
+    Range("A" & ultimafila).PasteSpecial
+
+    If Range("A1").value = "" then
+        Range("A1").EntireRow.Delete
+    End If
+    
+    'Guardamos los cambios en el archivo 2
+    Workbooks(2).Save
+    Workbooks(2).Close True
+    
+    Application.ScreenUpdating = True
+    Application.DisplayAlerts = True
+End Sub

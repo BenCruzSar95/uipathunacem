@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1846,11704</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1846,12123</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZFI081_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -128,7 +128,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="1856,11639" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="1856,12058" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XMLRutas" />
       <Variable x:TypeArguments="sxl:XDocument" Name="strXML" />
@@ -311,75 +311,64 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <If Condition="[strEstatusRegistros = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1814,8229" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[strEstatusRegistros = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1814,8648" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="1393,8071" sap2010:WorkflowViewState.IdRef="Sequence_108">
+        <Sequence sap:VirtualizedContainerService.HintSize="1393,8490" sap2010:WorkflowViewState.IdRef="Sequence_108">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:Comment sap:VirtualizedContainerService.HintSize="1351,74" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Comenzaremos a realizar validación del arbol de decisiones&#xA;" />
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1351,236" sap2010:WorkflowViewState.IdRef="CommentOut_82">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_129">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_111">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExportUiTree ExportedString="{x:Null}" Filter="{x:Null}" OperationTimeoutMS="{x:Null}" DestinationFile="[in_strUiTree]" DisplayName="Export UI Tree 'Tree  SAP.TableTreeCont...'" Format="XML" sap:VirtualizedContainerService.HintSize="434,235" sap2010:WorkflowViewState.IdRef="ExportUiTree_1" IncludeScreenshots="False" Overwrite="True" Priority="Performance" UiFramework="Default">
-                    <ui:ExportUiTree.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="996986ea-851b-4e87-8599-0e77b7656a97" InformativeScreenshot="dde611f1e240c05318d090d5e78f1286" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Documentos' /&gt;&lt;sap id='usr/cntlCCN_TREE/shellcont/shell/shellcont[1]/shell[1]' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:ExportUiTree.Target>
+          <Sequence sap:VirtualizedContainerService.HintSize="1351,655" sap2010:WorkflowViewState.IdRef="Sequence_111">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExportUiTree ExportedString="{x:Null}" Filter="{x:Null}" OperationTimeoutMS="{x:Null}" DestinationFile="[in_strUiTree]" DisplayName="Export UI Tree 'Tree  SAP.TableTreeCont...'" Format="XML" sap:VirtualizedContainerService.HintSize="434,235" sap2010:WorkflowViewState.IdRef="ExportUiTree_1" IncludeScreenshots="False" Overwrite="True" Priority="Performance" UiFramework="Default">
+              <ui:ExportUiTree.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="996986ea-851b-4e87-8599-0e77b7656a97" InformativeScreenshot="dde611f1e240c05318d090d5e78f1286" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Documentos' /&gt;&lt;sap id='usr/cntlCCN_TREE/shellcont/shell/shellcont[1]/shell[1]' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ExportUiTree.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExportUiTree>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Macros\macro.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:ExportUiTree>
-                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Config\Macros\macro.xlsx">
-                    <ui:ExcelApplicationScope.Body>
-                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\uitree.txt" DisplayName="Invoke VBA" EntryMethodName="uitree" EntryMethodParameters="[{in_strUiTree}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
-                        </Sequence>
-                      </ActivityAction>
-                    </ui:ExcelApplicationScope.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ExcelApplicationScope>
-                </Sequence>
-              </Sequence>
-            </ui:CommentOut.Body>
-          </ui:CommentOut>
+                    <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="Config\Macros\uitree.txt" DisplayName="Invoke VBA" EntryMethodName="uitree" EntryMethodParameters="[{in_strUiTree}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+          </Sequence>
           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1351,84" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;Descarga del archivo UiTree&quot;]" />
           <ui:Comment sap:VirtualizedContainerService.HintSize="1351,55" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Comenzaremos con la transacción ZFI081" />
           <Sequence DisplayName="For Numero de Autorización" sap:VirtualizedContainerService.HintSize="1351,7370" sap2010:WorkflowViewState.IdRef="Sequence_16">
