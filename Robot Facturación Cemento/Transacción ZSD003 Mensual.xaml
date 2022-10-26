@@ -114,7 +114,7 @@
     </ucas:Login>
     <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZSD003">
       <ucas:CallTransaction.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e244aba-888c-4341-8542-7f49c88646be" InformativeScreenshot="55fa6f015a031f5afe7346767f8802d7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e244aba-888c-4341-8542-7f49c88646be" InformativeScreenshot="7e3eec137d34342d13fa47de13e59c7d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access  -  Menú usuario p. RPA Facturación' /&gt;&lt;sap id='tbar[0]/okcd' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,5639</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,6008</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZSD003_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -87,7 +87,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="476,5574" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="478,5943" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="zsdiario" />
     </Sequence.Variables>
@@ -96,10 +96,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="excel.exe" />
-    <ucas:Logon Window="{x:Null}" ConnectionName="PRD_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
-    <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="434,364" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="%r9a_3Act89_%" Timeout="2000" Username="RPA_FACT">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon.exe" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="excel.exe" />
+    <ucas:Logon Window="{x:Null}" ConnectionName="PRD_HEC" DelayBetweenRetries="2000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="5" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" />
+    <ucas:Login SecurePassword="{x:Null}" Window="{x:Null}" Client="400" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="436,364" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ES" MultiLogonOptionToChoose="Single" Password="%r9a_3Act89_%" Timeout="2000" Username="RPA_FACT">
       <ucas:Login.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f4086bd-7279-40c8-bd45-1ba95157d039" InformativeScreenshot="2e47166d06d8a2a95bc7853b3465b9bb" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP' /&gt;">
           <ui:Target.TimeoutMS>
@@ -111,9 +111,9 @@
         </ui:Target>
       </ucas:Login.Target>
     </ucas:Login>
-    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZSD003">
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="CallTransaction_2" Transaction="ZSD003">
       <ucas:CallTransaction.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e244aba-888c-4341-8542-7f49c88646be" InformativeScreenshot="55fa6f015a031f5afe7346767f8802d7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf98a834-8dc0-4299-b198-7b8b4495352a" InformativeScreenshot="2447bbd805ff7d21f27e60075124ad01" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access  -  Menú usuario p. RPA Facturación' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -123,7 +123,30 @@
         </ui:Target>
       </ucas:CallTransaction.Target>
     </ucas:CallTransaction>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho" sap:VirtualizedContainerService.HintSize="434,599" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="01853724-17b4-4f56-8eea-2223646abecc" Version="V2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,329" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="ZSD003">
+            <ucas:CallTransaction.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e244aba-888c-4341-8542-7f49c88646be" InformativeScreenshot="7e3eec137d34342d13fa47de13e59c7d" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access  -  Menú usuario p. RPA Facturación' /&gt;&lt;sap id='tbar[0]/okcd' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ucas:CallTransaction.Target>
+          </ucas:CallTransaction>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho" sap:VirtualizedContainerService.HintSize="436,599" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="01853724-17b4-4f56-8eea-2223646abecc" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -151,7 +174,7 @@
         <uix:TargetApp Area="0, 0, 0, 0" ContentHash="PLH7IDmZEEuVQbJKn7RqYQ" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="85f63eab9e1ac343689a6043228708c4.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/LZuLFlJJ6EK4uG0dGy2A_g" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de Despacho' /&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho" sap:VirtualizedContainerService.HintSize="434,855" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho" sap:VirtualizedContainerService.HintSize="436,855" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="e09b0052-080c-44c8-90ba-4ec3d7e15bf4" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

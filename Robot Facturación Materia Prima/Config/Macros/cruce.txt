@@ -236,3 +236,14 @@ Sub web(web As String)
     Application.ScreenUpdating = True
     Application.DisplayAlerts = True
 End Sub
+
+Sub formato()
+
+    'Range("A1").Select
+    'ActiveCell.FormulaR1C1 = "7:50:29 AM"
+    Range("A1").Select
+    ActiveWorkbook.SaveAs Filename:= _
+        "C:\Users\rpaeyuser\Documents\UiPath\Robot Facturación Materia Prima\Config\Descarga mensual\ZMM023WEB.xls" _
+        , FileFormat:=xlExcel8, Password:="", WriteResPassword:="", _
+        ReadOnlyRecommended:=False, CreateBackup:=False
+End Sub
