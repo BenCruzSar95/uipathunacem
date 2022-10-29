@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,6008</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,6132</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZSD003_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -85,9 +85,10 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="478,5943" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZSD003" sap:VirtualizedContainerService.HintSize="478,6067" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="zsdiario" />
     </Sequence.Variables>
@@ -217,7 +218,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Ejecutar   (F8)">
+    <ucas:SelectMenuItem ContinueOnError="{x:Null}" AlterIfDisabled="True" DelayAfter="2000" DelayBefore="2000" DisplayName="Select Menu Item 'Button  Ejecutar (F8)'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Ejecutar   (F8)">
       <ucas:SelectMenuItem.Items>
         <scg:List x:TypeArguments="x:String" Capacity="4">
           <x:String xml:space="preserve">Ejecutar   (F8)</x:String>
@@ -235,7 +236,7 @@
         </ui:Target>
       </ucas:SelectMenuItem.Target>
     </ucas:SelectMenuItem>
-    <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'GridView  SAPGUI.GridVi...'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Exportar/Hoja de cálculo">
+    <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'GridView  SAPGUI.GridVi...'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Exportar/Hoja de cálculo">
       <ucas:SelectMenuItem.Items>
         <scg:List x:TypeArguments="x:String" Capacity="32">
           <x:String>Detall.</x:String>
@@ -272,7 +273,7 @@
         </scg:List>
       </ucas:SelectMenuItem.Items>
       <ucas:SelectMenuItem.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="095dad31-2182-4d29-9263-48f5a1487e40" InformativeScreenshot="3741228eb1d1038fa299e2a25b8f45c3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de Despacho Del: 01/04/2022 al 30/04/2022' /&gt;&lt;sap id='usr/cntlMAIN_CONT/shellcont/shell' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="095dad31-2182-4d29-9263-48f5a1487e40" InformativeScreenshot="07c9a4c6e1918926a7445eb9588ab876" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de Despacho Del: 16/09/2022 al 15/10/2022' /&gt;&lt;sap id='usr/cntlMAIN_CONT/shellcont/shell' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -282,7 +283,7 @@
         </ui:Target>
       </ucas:SelectMenuItem.Target>
     </ucas:SelectMenuItem>
-    <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
+    <ucas:ClickToolbarButton ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Click Toolbar Button 'Button Continuar'" sap:VirtualizedContainerService.HintSize="436,159" sap2010:WorkflowViewState.IdRef="ClickToolbarButton_1" Item="Continuar   (Intro)">
       <ucas:ClickToolbarButton.Items>
         <scg:List x:TypeArguments="x:String" Capacity="4">
           <x:String xml:space="preserve">Continuar   (Intro)</x:String>
@@ -300,7 +301,7 @@
         </ui:Target>
       </ucas:ClickToolbarButton.Target>
     </ucas:ClickToolbarButton>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho Del: 01/04/2022 al 30/04/2022" sap:VirtualizedContainerService.HintSize="434,1051" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Resumen de Despacho Del: 01/04/2022 al 30/04/2022" sap:VirtualizedContainerService.HintSize="436,1051" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="60a56e16-1e56-4035-88d9-92883d4f6712" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -334,10 +335,10 @@
         <uix:TargetApp Area="0, 0, 0, 0" ContentHash="9GLx9yELZUOUEicRujg-qg" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVFhHY/j//z/jQOJRB4w6YNQBA+8Ap5rV7E7Vqw8OCK5ZU8jgVL2GE8j4PwB4rXPtGsGBcgDIcmFIFNDfAXDLwQ44dOqipWP16v+O1auohFcDLQFhwpaDHfD20/fP9198/E8NvPf8vf9+DTBHELYc7ID3X37+pwY+e/Pxf7+K2f/tShdhcwBWy6nmgAu3n/73Lp3x37Z4AbYoWA+0XBCb5SBMsQPOAy33LJ72365kITafr3epW4vTchCmyAEgn3uWTIdavgrZ4r/EWA7CDA+evy1tW7Lvf8uiXSTi3f99yoFxToHlIMxglTuD075i2X/78qUkY4fK5ejBDrbcuQ53nKNjahZEUJ8TbzkIU8sBJPschqnlAKLjHB1TXh3XrJlJruUgPNoiGnXAqANGugP+MwIA+QFnw3tJZtEAAAAASUVORK5CYII=" InformativeScreenshot="eb0910232f2d6298b32c4fa216faaf9f.png" Reference="LmgfDy6S7UeFYiW9rl1PRw/FvXHHnnAe0ySm7_J27g9iQ" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Resumen de Despacho Del: 01/04/2022 al 30/04/2022' idx='*' /&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;inicio&quot;]" />
-    <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="excel.exe" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_strRutaExcelDaiario+&quot;/ZSD003Diario_&quot;+in_strFechaDiaActual+&quot;.XLSX&quot;]">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;inicio&quot;]" />
+    <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="436,132" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="excel.exe" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_strRutaExcelDaiario+&quot;/ZSD003Diario_&quot;+in_strFechaDiaActual+&quot;.XLSX&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -361,7 +362,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[zsdiario]</OutArgument>
       </Assign.To>
@@ -369,7 +370,7 @@
         <InArgument x:TypeArguments="x:String">[in_strRutaExcelDaiario+"/ZSD003Diario_"+in_strFechaDiaActual+".XLSX"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Data\Descarga_Diaria\Monthly_provision.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="436,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Data\Descarga_Diaria\Monthly_provision.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -392,5 +393,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Ultima modificación cruce de información&quot;]" />
   </Sequence>
 </Activity>

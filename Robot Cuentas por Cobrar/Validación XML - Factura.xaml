@@ -9,11 +9,12 @@
     <x:Property Name="PE_CODSAP" Type="OutArgument(x:String)" />
     <x:Property Name="PE_PLACA" Type="OutArgument(x:String)" />
     <x:Property Name="in_Row" Type="InArgument(x:String)" />
+    <x:Property Name="in_RutaDocumento" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,1485</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,1616</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZFI081_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -128,7 +129,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="418,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZFI081" sap:VirtualizedContainerService.HintSize="418,1551" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XMLRutas" />
       <Variable x:TypeArguments="sxl:XDocument" Name="strXML" />
@@ -176,7 +177,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1237" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1368" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="linea" />
         <Variable x:TypeArguments="x:String" Name="strextra" />
@@ -241,6 +242,7 @@
           <InArgument x:TypeArguments="x:String">[SalidaFactura+"&lt;/factura&gt;"]</InArgument>
         </Assign.Value>
       </Assign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[SalidaFactura]" />
       <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Cruce información XML workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Cruce información XML.xaml">
         <ui:InvokeWorkflowFile.Arguments>
@@ -268,6 +270,9 @@
           </OutArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_Row">
             <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Row" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_RutaDocumento">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_RutaDocumento" />
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
