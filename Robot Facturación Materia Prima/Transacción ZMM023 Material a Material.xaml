@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2752,6824</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2752,7456</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Transacción_ZMM023_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -118,7 +118,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="2762,6962" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Transacción_ZMM023" sap:VirtualizedContainerService.HintSize="2762,7391" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataPedidoSAP" />
       <Variable x:TypeArguments="x:String" Name="EstadoVentana" />
@@ -135,7 +135,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="2720,74" sap2010:WorkflowViewState.IdRef="Comment_15" Text="// For Each para leer material a material y registrarlo en SAP" />
-    <Sequence sap:VirtualizedContainerService.HintSize="2720,6756" sap2010:WorkflowViewState.IdRef="Sequence_112">
+    <Sequence sap:VirtualizedContainerService.HintSize="2720,7185" sap2010:WorkflowViewState.IdRef="Sequence_112">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -144,21 +144,21 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:ReadRange AddHeaders="True" DataTable="[DataOrigenDestino]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="2678,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="F:G" SheetName="Hoja1" WorkbookPath="Config\Descargas\Pedidos SAP.xlsx" />
       <ui:RemoveDuplicateRows DataTable="[DataOrigenDestino]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="2678,79" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_2" OutputDataTable="[DataOrigenDestino]" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataOrigenDestino]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2678,6418" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataOrigenDestino]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2678,6847" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="RowOrigen" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2644,6303" sap2010:WorkflowViewState.IdRef="Sequence_113">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2644,6732" sap2010:WorkflowViewState.IdRef="Sequence_113">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[RowOrigen(0).ToString &lt;&gt; &quot;ALMACEN ORIGEN&quot; And RowOrigen(0).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="2602,6211" sap2010:WorkflowViewState.IdRef="If_14">
+              <If Condition="[RowOrigen(0).ToString &lt;&gt; &quot;ALMACEN ORIGEN&quot; And RowOrigen(0).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="2602,6640" sap2010:WorkflowViewState.IdRef="If_14">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="2566,6024" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                  <Sequence sap:VirtualizedContainerService.HintSize="2566,6453" sap2010:WorkflowViewState.IdRef="Sequence_117">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,7 +176,7 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <Sequence sap:VirtualizedContainerService.HintSize="2524,5638" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                    <Sequence sap:VirtualizedContainerService.HintSize="2524,6067" sap2010:WorkflowViewState.IdRef="Sequence_83">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -468,7 +468,7 @@
                           </ucas:SelectMenuItem.Target>
                         </ucas:SelectMenuItem>
                       </Sequence>
-                      <Sequence sap:VirtualizedContainerService.HintSize="2482,5194" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                      <Sequence sap:VirtualizedContainerService.HintSize="2482,5623" sap2010:WorkflowViewState.IdRef="Sequence_85">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -508,7 +508,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NApplicationCard>
-                        <If Condition="[EstadoTicket.Equals (&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="2440,4433" sap2010:WorkflowViewState.IdRef="If_10">
+                        <If Condition="[EstadoTicket.Equals (&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="2440,4862" sap2010:WorkflowViewState.IdRef="If_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -516,7 +516,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="1917,4275" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                            <Sequence sap:VirtualizedContainerService.HintSize="1917,4704" sap2010:WorkflowViewState.IdRef="Sequence_93">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -561,7 +561,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NApplicationCard>
-                              <If Condition="[EstadoVentana.Contains(&quot;Compra&quot;)]" sap:VirtualizedContainerService.HintSize="1875,3554" sap2010:WorkflowViewState.IdRef="If_9">
+                              <If Condition="[EstadoVentana.Contains(&quot;Compra&quot;)]" sap:VirtualizedContainerService.HintSize="1875,3983" sap2010:WorkflowViewState.IdRef="If_9">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -569,7 +569,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="915,3140" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="915,3244" sap2010:WorkflowViewState.IdRef="Sequence_89">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -619,13 +619,13 @@
                                         </ui:Target>
                                       </ucas:ClickToolbarButton.Target>
                                     </ucas:ClickToolbarButton>
-                                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="873,2086" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="d233822d-c110-4278-8617-d52b111073c8" Version="V2">
+                                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="873,2190" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="d233822d-c110-4278-8617-d52b111073c8" Version="V2">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,1797" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,1861" sap2010:WorkflowViewState.IdRef="Sequence_97">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -678,26 +678,9 @@
                                               </ui:InterruptibleDoWhile.Body>
                                             </ui:InterruptibleDoWhile>
                                             <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                                            <If Condition="[EstadoPRO.Equals(&quot;PRO&quot;) AND ExisteVentana=False]" sap:VirtualizedContainerService.HintSize="797,459" sap2010:WorkflowViewState.IdRef="If_11">
+                                            <If Condition="[ExisteVentana=True]" sap:VirtualizedContainerService.HintSize="797,523" sap2010:WorkflowViewState.IdRef="If_11">
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_103">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NGetAttribute Attribute="text" DelayAfter="1" DelayBefore="1" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_6" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
-                                                    <uix:NGetAttribute.Result>
-                                                      <OutArgument x:TypeArguments="x:String">[EstadoPRO]</OutArgument>
-                                                    </uix:NGetAttribute.Result>
-                                                    <uix:NGetAttribute.Target>
-                                                      <uix:TargetAnchorable DesignTimeRectangle="201, 180, 49, 19" FriendlyName="'REV'" FullSelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' check:text='REV' /&gt;" Guid="0f1b86cb-cbfc-4928-920d-bafab927d4f3" InformativeScreenshot="7c5ad36cbd19ed317e48fa9d4c6f5692.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-                                                    </uix:NGetAttribute.Target>
-                                                  </uix:NGetAttribute>
-                                                </Sequence>
-                                              </If.Then>
-                                              <If.Else>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,244" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,335" sap2010:WorkflowViewState.IdRef="Sequence_103">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -708,6 +691,40 @@
                                                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                                                     </ui:SendMail.Files>
                                                   </ui:SendMail>
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                                                    <ui:CommentOut.Body>
+                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NGetAttribute Attribute="text" DelayAfter="1" DelayBefore="1" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_6" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
+                                                          <uix:NGetAttribute.Result>
+                                                            <OutArgument x:TypeArguments="x:String">[EstadoPRO]</OutArgument>
+                                                          </uix:NGetAttribute.Result>
+                                                          <uix:NGetAttribute.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="201, 180, 49, 19" FriendlyName="'REV'" FullSelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' check:text='REV' /&gt;" Guid="0f1b86cb-cbfc-4928-920d-bafab927d4f3" InformativeScreenshot="7c5ad36cbd19ed317e48fa9d4c6f5692.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                                          </uix:NGetAttribute.Target>
+                                                        </uix:NGetAttribute>
+                                                      </Sequence>
+                                                    </ui:CommentOut.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:CommentOut>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </Sequence>
                                               </If.Else>
                                             </If>
@@ -727,7 +744,7 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="915,3396" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="915,3825" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -782,19 +799,19 @@
                                         </ui:Target>
                                       </ucas:ClickToolbarButton.Target>
                                     </ucas:ClickToolbarButton>
-                                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="873,2086" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" ScopeGuid="d233822d-c110-4278-8617-d52b111073c8" Version="V2">
+                                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Entrada de Mercancía por Compra/Traslado" sap:VirtualizedContainerService.HintSize="873,2515" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" ScopeGuid="d233822d-c110-4278-8617-d52b111073c8" Version="V2">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,1797" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,2186" sap2010:WorkflowViewState.IdRef="Sequence_108">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="797,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_7" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
+                                            <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="514,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_7" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
                                               <uix:NGetAttribute.Result>
                                                 <OutArgument x:TypeArguments="x:String">[EstadoPRO]</OutArgument>
                                               </uix:NGetAttribute.Result>
@@ -802,7 +819,7 @@
                                                 <uix:TargetAnchorable DesignTimeRectangle="201, 180, 49, 19" FriendlyName="'REV'" FullSelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' check:text='REV' /&gt;" Guid="0f1b86cb-cbfc-4928-920d-bafab927d4f3" InformativeScreenshot="7c5ad36cbd19ed317e48fa9d4c6f5692.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                                               </uix:NGetAttribute.Target>
                                             </uix:NGetAttribute>
-                                            <Assign sap:VirtualizedContainerService.HintSize="797,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                            <Assign sap:VirtualizedContainerService.HintSize="514,61" sap2010:WorkflowViewState.IdRef="Assign_4">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:Boolean">[ExisteVentana]</OutArgument>
                                               </Assign.To>
@@ -810,7 +827,7 @@
                                                 <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[EstadoPRO.Equals(&quot;REV&quot;) AND ExisteVentana=False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="797,795" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[EstadoPRO.Equals(&quot;REV&quot;) AND ExisteVentana=False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="514,795" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                                               <ui:InterruptibleDoWhile.Body>
                                                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,630" sap2010:WorkflowViewState.IdRef="Sequence_105">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -840,37 +857,48 @@
                                                 </Sequence>
                                               </ui:InterruptibleDoWhile.Body>
                                             </ui:InterruptibleDoWhile>
-                                            <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                            <If Condition="[EstadoPRO.Equals(&quot;PRO&quot;) AND ExisteVentana=False]" sap:VirtualizedContainerService.HintSize="797,459" sap2010:WorkflowViewState.IdRef="If_12">
+                                            <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="514,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                            <If Condition="[ExisteVentana=True]" sap:VirtualizedContainerService.HintSize="514,848" sap2010:WorkflowViewState.IdRef="If_12">
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="478,660" sap2010:WorkflowViewState.IdRef="Sequence_106">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NGetAttribute Attribute="text" DelayAfter="1" DelayBefore="1" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_9" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
-                                                    <uix:NGetAttribute.Result>
-                                                      <OutArgument x:TypeArguments="x:String">[EstadoPRO]</OutArgument>
-                                                    </uix:NGetAttribute.Result>
-                                                    <uix:NGetAttribute.Target>
-                                                      <uix:TargetAnchorable DesignTimeRectangle="201, 180, 49, 19" FriendlyName="'REV'" FullSelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' check:text='REV' /&gt;" Guid="0f1b86cb-cbfc-4928-920d-bafab927d4f3" InformativeScreenshot="7c5ad36cbd19ed317e48fa9d4c6f5692.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-                                                    </uix:NGetAttribute.Target>
-                                                  </uix:NGetAttribute>
-                                                </Sequence>
-                                              </If.Then>
-                                              <If.Else>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,243" sap2010:WorkflowViewState.IdRef="Sequence_107">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Estimados,&quot;+&#xA;&quot;Favor de revisar el grupo de materiales con el almacen de origen: &quot;+ RowOrigen(0).ToString+&quot; y el almacen de destino: &quot; + RowOrigen(1).ToString]" DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="334,151" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Error ventana emergente" To="cristina.flores@unacem.ec;javier.revelo@unacem.ec">
+                                                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Estimados,&quot;+&#xA;&quot;Favor de revisar el grupo de materiales con el almacen de origen: &quot;+ RowOrigen(0).ToString+&quot; y el almacen de destino: &quot; + RowOrigen(1).ToString]" DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="436,151" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Error ventana emergente" To="cristina.flores@unacem.ec;javier.revelo@unacem.ec">
                                                     <ui:SendMail.Files>
                                                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
                                                     </ui:SendMail.Files>
                                                   </ui:SendMail>
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,376" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                                                    <ui:CommentOut.Body>
+                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,298" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NGetAttribute Attribute="text" DelayAfter="1" DelayBefore="1" DisplayName="Get Attribute 'REV'" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_9" ScopeIdentifier="d233822d-c110-4278-8617-d52b111073c8" Version="V1">
+                                                          <uix:NGetAttribute.Result>
+                                                            <OutArgument x:TypeArguments="x:String">[EstadoPRO]</OutArgument>
+                                                          </uix:NGetAttribute.Result>
+                                                          <uix:NGetAttribute.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="201, 180, 49, 19" FriendlyName="'REV'" FullSelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap colName='STTCK' id='usr/cntlGRID1/shellcont/shell' check:text='REV' /&gt;" Guid="0f1b86cb-cbfc-4928-920d-bafab927d4f3" InformativeScreenshot="7c5ad36cbd19ed317e48fa9d4c6f5692.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Entrada de Mercancía por Compra/Traslado' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                                          </uix:NGetAttribute.Target>
+                                                        </uix:NGetAttribute>
+                                                      </Sequence>
+                                                    </ui:CommentOut.Body>
+                                                  </ui:CommentOut>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </Sequence>
                                               </If.Else>
                                             </If>

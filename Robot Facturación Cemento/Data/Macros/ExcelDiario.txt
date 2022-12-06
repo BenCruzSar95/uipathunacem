@@ -259,11 +259,11 @@ Sub excelmensual()
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
     Range("BA1").Select
     ActiveCell.FormulaR1C1 = "Nombre Transp"
-    Range("BB1").Select
-    ActiveCell.FormulaR1C1 = "Placa"
+    'Range("BB1").Select
+    'ActiveCell.FormulaR1C1 = "Placa"
    
-    Columns("BC:BH").Select
-    Selection.Delete Shift:=xlToLeft
+    'Columns("BC:BH").Select
+    'Selection.Delete Shift:=xlToLeft
     Range("AZ1").Select
 
 End Sub
@@ -352,9 +352,41 @@ Sub excelmensualdos(zsdiario)
     Selection.AutoFill Destination:=Range("BA3:BA" & ultimafila), Type:=xlFillDefault
     
     'Formula Placa
-    Range("BB3").Select
-    ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-21],Cías!R1C1:R10000C5,3,0)"
-    Range("BB3").Select
-    Selection.AutoFill Destination:=Range("BB3:BB" & ultimafila), Type:=xlFillDefault    
+    'Range("BB3").Select
+    'ActiveCell.FormulaR1C1 = "=VLOOKUP(RC[-21],Cías!R1C1:R10000C5,3,0)"
+    'Range("BB3").Select
+    'Selection.AutoFill Destination:=Range("BB3:BB" & ultimafila), Type:=xlFillDefault    
+
+    'Quitamos el formato de número
+    ultimacolumna = (ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Column) + 1
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Dim celdanumero As Range
+    For Each celdanumero In Range("AB3:AB" & ultimafila)
+        valor = celdanumero.Value
+        celdanumero.Offset(0, 30).Select
+        celdanumero.Offset(0, 30).Value = valor
+        
+    Next celdanumero
+    
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Range("BF3:BF" & ultimafila).Copy
+    
+    Range("AB3").PasteSpecial
+    
+    ultimafila = ActiveSheet.UsedRange.SpecialCells(xlCellTypeLastCell).Row
+    Range("BF3:BF" & ultimafila).Clear
+    
+    Range("AB1").Select
+    
+    Range("AG3").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Replace What:="-", Replacement:="", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+    Columns("AR:AR").Select
+    Selection.NumberFormat = "@"
+    Range("AR2").Select
+    
 
 End Sub

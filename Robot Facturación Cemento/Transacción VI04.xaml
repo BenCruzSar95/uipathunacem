@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_VI04" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,3006" sap2010:WorkflowViewState.IdRef="Transacción_VI04_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Transacción_VI04" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1232,3006" sap2010:WorkflowViewState.IdRef="Transacción_VI04_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
       <x:String>System.Activities</x:String>
@@ -101,7 +101,7 @@
     </ucas:Login>
     <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="VI04">
       <ucas:CallTransaction.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eaad30bf-4b17-49c3-90ed-afd68786a67c" InformativeScreenshot="520ea672c794ac3781334663e41163ae" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access  -  Menú usuario p. RPA Facturación' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eaad30bf-4b17-49c3-90ed-afd68786a67c" InformativeScreenshot="68c43814605c55721a53b0468773087f" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

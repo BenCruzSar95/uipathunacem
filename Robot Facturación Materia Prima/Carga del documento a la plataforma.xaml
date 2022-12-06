@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1232,3792</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1232,4079</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Carga_del_documento_a_la_plataforma_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -47,6 +47,10 @@
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -92,21 +96,37 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Carga_del_documento_a_la_plataforma" sap:VirtualizedContainerService.HintSize="915,3727" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Carga_del_documento_a_la_plataforma" sap:VirtualizedContainerService.HintSize="915,3974" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ReporteMP">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\rpaeyuser\Documents\UiPath\Robot Facturación Materia Prima\Config\Descarga mensual\Reporte MP.xlsx</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="ZMM023XLS">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\rpaeyuser\Documents\UiPath\Robot Facturación Materia Prima\Config\Descarga mensual\ZMM023WEB.xls</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="873,647" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://aplicaciones.unacem.com.ec/planillaselectronicas/">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="873,709" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://aplicaciones.unacem.com.ec/planillaselectronicas/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,546" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,608" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,6 +178,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
@@ -168,13 +189,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SISTEMA DE PLANILLAS ELECTRONICAS DE TRANSPORTE" sap:VirtualizedContainerService.HintSize="873,662" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5cda179c-7109-40a3-a928-9bdf837c141c" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SISTEMA DE PLANILLAS ELECTRONICAS DE TRANSPORTE" sap:VirtualizedContainerService.HintSize="873,723" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5cda179c-7109-40a3-a928-9bdf837c141c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,507" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,6 +217,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -209,13 +231,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SISTEMA DE PLANILLAS ELECTRONICAS DE TRANSPORTE" sap:VirtualizedContainerService.HintSize="873,2246" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="65a0570b-c9da-4709-9f2e-a7631404d92d" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: SISTEMA DE PLANILLAS ELECTRONICAS DE TRANSPORTE" sap:VirtualizedContainerService.HintSize="873,2370" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="65a0570b-c9da-4709-9f2e-a7631404d92d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,2030" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="839,2154" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="StatusCemento" />
               <Variable x:TypeArguments="x:String" Name="StatusMateriaPrima" />
@@ -252,6 +274,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="747, 494, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="63aff075-ffad-4cd9-a35f-968f1588282f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVGhD7ZbBEYQgDEXpiW6oZG+0QitUsWc7sIOsKChB3HFGN8LOP7xDMHB4gT+qcRwJyAHhwkC4MEy4er3BD2COWVFpBtdhjlkRG4ZhADcA4cJAuDAQLgyEC9OucGdIKbWira/3dUabwmfZmqxPa56s/g/pDQpf5BpXrHtLWhly+VqHtCf8UGwYRLr1jkx4AS70ViJnPiPFUTor7rFbVD3xYtoUri353bf85gd5k7TUNwsuhpHiaIqnRWzcY9y6vg1DjjaFn73ha8YP5EwcBrvdkVlyuWd/hgTtCT+V4aWsbM/hwCD8mN1zD3LyzC3q3TBq+Qzh3yn+w/mNX2QZo+vfy1hBpFzlGVl3AOHCQLgwnQrvFwgXBsKFOS0c3AtzzIpKM7gOc5wX4PdAuDAQLspIHzXPr3L4gVkTAAAAAElFTkSuQmCC" InformativeScreenshot="4add8d1209c4a83c01941cb4443548f9.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
             <uix:NClick ClickType="Single" DelayAfter="15" DelayBefore="5" DisplayName="Click 'Cargar'" sap:VirtualizedContainerService.HintSize="797,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65a0570b-c9da-4709-9f2e-a7631404d92d" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://aplicaciones.unacem.com.ec/planillaselectronicas/superadmin/uploadmpr.jspx" DesignTimeRectangle="486, 337, 108, 32" ElementType="Text" FriendlyName="'Cargar'" FullSelectorArgument="&lt;webctrl aaname='Cargar' parentid='j_idt34:j_idt40' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cargar' parentid='j_idt34:j_idt40' tag='SPAN' type='' class='ui-button-text ui-c' check:innerText='Cargar' /&gt;" Guid="45adeefa-472f-4347-99ee-a1416e09614c" ImageBase64="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" InformativeScreenshot="9f1154940832657f6ec364c61e4b43f2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SISTEMA DE PLANILLAS ELECTRONICAS DE TRANSPORTE' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
@@ -282,6 +305,7 @@
                 </uix:TargetAnchorable>
               </uix:NGetAttribute.Target>
             </uix:NGetAttribute>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
             <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'MATERIAS PRIMAS'" sap:VirtualizedContainerService.HintSize="797,206" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" ScopeIdentifier="65a0570b-c9da-4709-9f2e-a7631404d92d" Version="V1">
               <uix:NGetAttribute.Result>
                 <OutArgument x:TypeArguments="x:String">[StatusMateriaPrima]</OutArgument>
@@ -307,7 +331,12 @@
                   <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Estimados:&#xA;El  proceso de facturas de materias primas  mensual ha finalizado con éxito.&#xA;Anexamos el documento que se subió a la plataforma.&#xA;Saludos." DisplayName="Send SMTP Mail Message" Email="rpa@unacem.ec" EnableSSL="True" From="rpa@unacem.ec" sap:VirtualizedContainerService.HintSize="334,151" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="RPA CUENTAS POR COBRAR" Password="uN4c3m.1!@!" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Proceso de facturas de materia prima." To="cristina.flores@unacem.ec;javier.revelo@unacem.ec">
                     <ui:SendMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                        <InArgument x:TypeArguments="x:String">[in_ZMM023CSV]</InArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ZMM023XLS" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReporteMP" />
+                        </InArgument>
                       </scg:List>
                     </ui:SendMail.Files>
                   </ui:SendMail>
